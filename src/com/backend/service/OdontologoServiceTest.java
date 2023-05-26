@@ -12,10 +12,20 @@ class OdontologoServiceTest {
     private OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
 
     @Test
+    public void deberiaAgregarUnOdontologo(){
+        Odontologo odontologo = new Odontologo(5509, "Roberto", "Ballerno");
+
+        Odontologo guardarOdontologoResult = odontologoService.guardarOdontologo(odontologo);
+
+        assertEquals(5509, odontologo.getNumeroDeMatricula());
+        assertNotNull(guardarOdontologoResult);
+    }
+
+    @Test
     public void deberiaListarTodosLosOdontologos(){
         List<Odontologo> odontologosTest = odontologoService.listarOdontologos();
         assertFalse(odontologosTest.isEmpty());
-        assertTrue(odontologosTest.size() >= 2);
+        assertTrue(odontologosTest.size() >= 3);
     }
 
 }
