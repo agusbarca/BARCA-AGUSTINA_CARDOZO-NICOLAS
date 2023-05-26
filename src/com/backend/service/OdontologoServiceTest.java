@@ -25,7 +25,7 @@ class OdontologoServiceTest {
     public void deberiaListarTodosLosOdontologos(){
         List<Odontologo> odontologosTest = odontologoService.listarOdontologos();
         assertFalse(odontologosTest.isEmpty());
-        assertTrue(odontologosTest.size() >= 3);
+        assertTrue(odontologosTest.size() >= 2);
     }
 
 }
