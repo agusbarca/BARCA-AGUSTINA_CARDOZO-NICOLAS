@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 
 public class Application {
     public static void main(String[] args) {
+        //Muy bien chicos! lo único los paquetes entity y service deben ir dentro de com.backend
         Connection connection = null;
         try {
             Class.forName("org.h2.Driver");
